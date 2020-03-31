@@ -1,4 +1,4 @@
-package ch.fhnw.oop2.module07.ab2;
+package ch.fhnw.oop2.module07.ab3;
 
 import javafx.application.Application;
 import javafx.scene.Parent;
@@ -15,7 +15,7 @@ public class Starter extends Application {
 
         Scene scene = new Scene(rootPanel);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("OOP2: AB 02");
+        primaryStage.setTitle("OOP2: AB 03");
         primaryStage.setWidth(400);
         primaryStage.setHeight(300);
         primaryStage.centerOnScreen();
