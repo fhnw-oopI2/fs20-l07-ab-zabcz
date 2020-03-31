@@ -12,7 +12,7 @@ final class ObservableCollection extends VBox {
 	
 	private ObservableList<String> observableList;
 	
-	private Button shuffle;
+	private Button btnShuffle;
 	private ToolBar toolBar;
 	private ListView<String> listView;
 	
@@ -25,12 +25,18 @@ final class ObservableCollection extends VBox {
 		String[] names = {"Anna", "Beatrice", "Charles", "Donald"};
 		observableList = FXCollections.observableArrayList(names);
 		
-		shuffle = new Button("Shuffle");
-		toolBar = new ToolBar(shuffle);
+		btnShuffle = new Button("Shuffle");
+		toolBar = new ToolBar(btnShuffle);
 		
-		listView = new ListView<>(observableList);	
+		listView = new ListView<>(observableList);
+		btnShuffle.setOnAction(event -> shuffleList());
+
 	}
-	
+
+	private void shuffleList() {
+		FXCollections.shuffle(observableList);
+	}
+
 	private void layoutControls() {
 		setPadding(new Insets(20));
 		setSpacing(20);
